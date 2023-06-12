@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300&display=swap" rel="stylesheet">
+  <link href="./styles/style.css" type="text/css" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <title>Spotify Clone</title>
+  <style>
+    body.dark-mode {
+      background-color: #1a1a1a;
+      color: #fff;
+    }
+
+    body.dark-mode header {
+      background-color: #1a1a1a;
+      color: #fff;
+    }
+
+    body.dark-mode header ul li>a {
+      color: #fff;
+    }
+
+    body.dark-mode .hero-section {
+      color: #fff;
+    }
+
+    body.dark-mode .whats-on-spotify {
+      background-color: #00b172;
+      color: #fff;
+    }
+
+    body.dark-mode .spotify-features {
+      background-color: #1a1a1a;
+      color: #fff;
+    }
+
+    body.dark-mode .section-title--white {
+      border-color: #fff;
+    }
+
+    body.dark-mode .row .column h3 {
+      color: #00b172;
+    }
+
+    body.dark-mode footer {
+      background-color: #1a1a1a;
+      color: #fff;
+    }
+
+    body.dark-mode footer a {
+      color: #fff;
+    }
+
+    .toggle-container {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 9999;
+    }
+
+    .toggle-container a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background-color: #fff;
+      border-radius: 50%;
+      color: #1a1a1a;
+      font-size: 24px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .toggle-container a:hover {
+      background-color: #00b172;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="./images/spotify-logo.png" alt="Spotify Logo">
+    <nav>
+      <ul>
+        <li><a href="/premium">Premium</a></li>
+        <li><a href="/discover">Discover</a></li>
+        <li><a href="/help">Help</a></li>
+        <li><a href="/download">Download</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="hero-section" id="hero-section">
+      <h1>Music for everyone.</h1>
+      <p>
+        Spotify is now free on mobile, tablet and computer. Listen to the
+        right music, wherever you are.
+      </p>
+    </section>
+    <div class="container">
+      <section class="whats-on-spotify" id="whats-on-spotify">
+        <h2 class="section-title">What’s on Spotify?</h2>
+        <div class="row">
+          <div class="column">
+            <img src="./images/music-icon.png" alt="volume symbol">
+            <h3>Millions of Songs</h3>
+            <p>There are millions of songs on Spotify</p>
+          </div>
+          <div class="column">
+            <img src="./images/high-quality-icon.png" alt="sound waves symbol">
+            <h3>HD Music</h3>
+            <p>Listen to music as if you were listening live</p>
+          </div>
+          <div class="column">
+            <img src="./images/devices-icon.png" alt="devices symbol">
+            <h3>Stream Everywhere</h3>
+            <p>Stream music on your smartphone, tablet or computer</p>
+          </div>
+        </div>
+      </section>
+      <section class="spotify-features" id="spotify-features">
+        <div>
+          <h2 class="section-title section-title--white">
+            It’s as yeezy as Kanye West.
+          </h2>
+          <div class="feature-blocks">
+            <h3>Search</h3>
+            <p>Know what you want to listen to? Just search and hit play.</p>
+          </div>
+          <div class="feature-blocks">
+            <h3>Browse</h3>
+            <p>
+              Check out the latest charts, brand new releases and great
+              playlists for right now.
+            </p>
+          </div>
+          <div class="feature-blocks">
+            <h3>Discover</h3>
+            <p>
+              Enjoy new music every Monday with your own personal playlist. Or
+              sit back and enjoy Radio.
+            </p>
+          </div>
+        </div>
+        <div>
+          <img class="spotify-white-icon" src="./images/spotify-icon-white.png" alt="white Spotify logo">
+        </div>
+        <div>
+          <img class="spotify-app" src="./images/spotify-app1.png" alt="spotify app running in mobile phone">
+        </div>
+      </section>
+    </div>
+  </main>
+  <div class="toggle-container">
+    <a href="javascript:void(0);" id="theme-toggle"><i class='bx bxs-moon'></i></a>
+  </div>
+  <footer>
+    <p>&copy; Spotify Clone by @tangorishi. All rights reserved. | <a href="/privacy">Privacy Policy</a> | <a href="/terms">Terms
+        of Service</a></p>
+  </footer>
+  <script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+    themeToggle.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+    });
+  </script>
+</body>
+
+</html>
